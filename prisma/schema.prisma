@@ -1,14 +1,51 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
-// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
-// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
-
-generator client {
-  provider = "prisma-client"
-  output   = "../lib/generated/prisma"
+model User {
+  id        String   @id @default(cuid())
+  email     String   @unique
+  name      String?
+  password  String?  // pokud použiješ credentials auth
+  role      Role     @default(USER)
+  createdAt DateTime @default(now())
+  bookings  Booking[]
 }
 
-datasource db {
-  provider = "postgresql"
+model Booking {
+  id            String   @id @default(cuid())
+  name          String
+  email         String
+  phone         String?
+  idea          String   // popis motivu
+  preferredDate DateTime?
+  status        BookingStatus @default(PENDING)
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+  userId        String?
+  user          User?    @relation(fields: [userId], references: [id])
+}
+
+model Flash {
+  id          String   @id @default(cuid())
+  title       String
+  description String?
+  imageUrl    String
+  available   Boolean  @default(true)
+  createdAt   DateTime @default(now())
+}
+
+model Work {
+  id          String   @id @default(cuid())
+  title       String?
+  imageUrl    String
+  createdAt   DateTime @default(now())
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  DONE
+  CANCELED
+}
+
+enum Role {
+  USER
+  ADMIN
 }
