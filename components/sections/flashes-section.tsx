@@ -25,7 +25,7 @@ export function FlashesSection() {
           {MOCK_FLASHES.map((flash) => (
             <Card key={flash.id} className="bg-zinc-900 border-zinc-800">
               <CardContent className="p-2">
-                <div className="relative w-full aspect-[3/4] overflow-hidden rounded-lg">
+                <div className="relative w-full aspect-3/4 overflow-hidden rounded-lg">
                   <Image
                     src={flash.src}
                     alt={flash.title}

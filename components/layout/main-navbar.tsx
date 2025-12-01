@@ -50,9 +50,9 @@ export function MainNavbar() {
         >
           <span className="sr-only">Menu</span>
           <div className="h-5 w-6 space-y-[3px]">
-            <span className="block h-[2px] bg-zinc-100" />
-            <span className="block h-[2px] bg-zinc-100" />
-            <span className="block h-[2px] bg-zinc-100" />
+            <span className="block h-0.5 bg-zinc-100" />
+            <span className="block h-0.5 bg-zinc-100" />
+            <span className="block h-0.5 bg-zinc-100" />
           </div>
         </button>
 

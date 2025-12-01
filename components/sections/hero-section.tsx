@@ -9,7 +9,7 @@ export function HeroSection() {
       id="top"
     >
       <div className="absolute inset-0 bg-[url('/hero-tattoo.jpg')] bg-cover bg-center opacity-40" />
-      <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-black" />
+      <div className="absolute inset-0 bg-linear-to-b from-black/80 via-black/90 to-black" />
 
       <div className="relative z-10 mx-auto max-w-3xl px-4 text-center space-y-6">
         <p className="text-xs tracking-[0.3em] uppercase text-zinc-400">
