@@ -94,7 +94,7 @@ export function ContactSection() {
                     className="gap-2"
                   >
                     <a
-                      href="https://www.facebook.com"
+                      href="https://www.facebook.com/devilandsun.tattoo"
                       target="_blank"
                       rel="noreferrer"
                     >

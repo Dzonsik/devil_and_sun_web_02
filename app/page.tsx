@@ -1,5 +1,4 @@
 // app/page.tsx
-import { MainNavbar } from "@/components/layout/main-navbar";
 import { HeroSection } from "@/components/sections/hero-section";
 import { FlashesSection } from "@/components/sections/flashes-section";
 import { AboutSection } from "@/components/sections/about-section";
@@ -9,8 +8,7 @@ import { ContactSection } from "@/components/sections/contact-section";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen flex flex-col bg-linear-to-b from-black via-zinc-950 to-black">
-      <MainNavbar />
+    <>
       <main className="flex-1">
         <HeroSection />
         <FlashesSection />
@@ -22,6 +20,6 @@ export default function HomePage() {
       <footer className="border-t border-zinc-800 py-4 text-xs text-center text-zinc-500">
         © {new Date().getFullYear()} Devil & Sun tattoo – All rights reserved
       </footer>
-    </div>
+    </>
   );
 }
